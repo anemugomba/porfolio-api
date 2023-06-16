@@ -53,8 +53,7 @@ $app->singleton(
 */
 
 
-header("Access-Control-Allow-Origin: http://anesucain-route-planner.s3-website-us-east-1.amazonaws.com");
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: http://anesucain-route-planner.s3-website-us-east-1.amazonaws.com,http://localhost:3000");
 header('Access-Control-Allow-Methods: *');
 header('Access-Control-Allow-Headers: *');
 
