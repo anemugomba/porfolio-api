@@ -23,5 +23,6 @@ Route::get('/gestalt', function (Request $request) {
 });
 
 Route::get('/environments', function (Request $request) {
+    /*comment to test if environments will be ovveridden*/
     return response(array('APP_NAME' => env('APP_NAME'), 'APP_ENV' => env('APP_ENV'), 'AWS_LOCATION_SERVICE_KEY' => env('AWS_LOCATION_SERVICE_KEY')), 200);
 });
