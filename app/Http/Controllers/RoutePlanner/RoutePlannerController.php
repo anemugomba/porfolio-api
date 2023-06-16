@@ -12,40 +12,6 @@ class RoutePlannerController extends Controller
 {
     public function routeCalculation(Request $request)
     {
-        // start
-        /*
-         * $result = $client->calculateRoute([
-    'CalculatorName' => '<string>', // REQUIRED
-    'CarModeOptions' => [
-        'AvoidFerries' => true || false,
-        'AvoidTolls' => true || false,
-    ],
-    'DepartNow' => true || false,
-    'DeparturePosition' => [<float>, ...], // REQUIRED
-    'DepartureTime' => <integer || string || DateTime>,
-    'DestinationPosition' => [<float>, ...], // REQUIRED
-    'DistanceUnit' => 'Kilometers|Miles',
-    'IncludeLegGeometry' => true || false,
-    'TravelMode' => 'Car|Truck|Walking|Bicycle|Motorcycle',
-    'TruckModeOptions' => [
-        'AvoidFerries' => true || false,
-        'AvoidTolls' => true || false,
-        'Dimensions' => [
-            'Height' => <float>,
-            'Length' => <float>,
-            'Unit' => 'Meters|Feet',
-            'Width' => <float>,
-        ],
-        'Weight' => [
-            'Total' => <float>,
-            'Unit' => 'Kilograms|Pounds',
-        ],
-    ],
-    'WaypointPositions' => [
-        [<float>, ...],
-        // ...
-    ],
-]);*/
 
         /*try {*/
             $client = new LocationServiceClient(
@@ -61,10 +27,6 @@ class RoutePlannerController extends Controller
 
             $result = $client->calculateRoute([
                 'CalculatorName' => 'route-planner-acmg',
-                /*'CarModeOptions' => [
-                    'AvoidFerries' => $request->avoidFerries,
-                    'AvoidTolls' => $request->avoidTolls,
-                ],*/
                 'DepartNow' => true,
                 'DistanceUnit' => $request->distanceUnit,
                 'TravelMode' => $request->travelMode,
