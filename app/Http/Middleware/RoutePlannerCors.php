@@ -19,7 +19,7 @@ class RoutePlannerCors
         if (str_contains($request->getSchemeAndHttpHost(), 'localhost')) {
             $origin = 'http://localhost:3000';
         } else {
-            $origin = 'http://portfolio-api.us-east-1.elasticbeanstalk.com/';
+            $origin = 'http://portfolio-api.us-east-1.elasticbeanstalk.com';
         }
 
         return $next($request)
