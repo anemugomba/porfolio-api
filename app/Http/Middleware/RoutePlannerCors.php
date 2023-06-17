@@ -22,10 +22,9 @@ class RoutePlannerCors
             $origin = 'http://anesucain-route-planner.s3-website-us-east-1.amazonaws.com';
         }
 
-        return $next($request)
-            /*->header('Access-Control-Allow-Origin', $origin)*/
-            ->header('Access-Control-Allow-Origin', '*')
-            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
-            ->header('Access-Control-Allow-Headers', '*');
+        return $next($request);
+            /*->header('Access-Control-Allow-Origin', '*')
+            ->header('Access-Control-Allow-Methods', '*')
+            ->header('Access-Control-Allow-Headers', '*');*/
     }
 }
