@@ -19,7 +19,7 @@ class RoutePlannerCors
         if (str_contains($request->getSchemeAndHttpHost(), 'localhost')) {
             $origin = 'http://localhost:3000';
         } else {
-            $origin = 'http://anesucain-route-planner.s3-website-us-east-1.amazonaws.com/';
+            $origin = 'http://anesucain-route-planner.s3-website-us-east-1.amazonaws.com';
         }
 
         return $next($request)
